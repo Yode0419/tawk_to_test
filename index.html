@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GitHub Pages × Tawk.to 測試</title>
+  <meta name="description" content="A minimal test site for GitHub Pages with Tawk.to live chat.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="container">
+    <h1>GitHub Pages × Tawk.to 測試</h1>
+    <p>這是一個最小可用的靜態網站，右下角會載入 Tawk.to 聊天元件。</p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>開始測試</h2>
+      <ol>
+        <li>把這個專案上傳到 GitHub。</li>
+        <li>在 GitHub 的 <strong>Settings → Pages</strong> 啟用 Pages。</li>
+        <li>把下方的 <code>YOUR_TAWK_WIDGET_ID</code> 換成你自己的 widget id。</li>
+        <li>重新整理網站頁面，應會看到右下角的聊天按鈕。</li>
+      </ol>
+      <p class="note">若你暫時沒有 widget id，也可以先保留預設，網站仍可正常顯示。</p>
+    </section>
+
+    <section class="card">
+      <h2>常見問題</h2>
+      <details>
+        <summary>如何取得 Tawk.to widget id？</summary>
+        <p>登入 Tawk.to 後台 → Administration → <em>Chat Widget</em> → Install Widget，複製腳本中
+        <code>https://embed.tawk.to/&lt;你的 widget id&gt;/default</code> 的那段 ID。</p>
+      </details>
+      <details>
+        <summary>GitHub Pages 網址是什麼？</summary>
+        <p>個人網站：<code>https://&lt;你的帳號&gt;.github.io/</code><br>
+        專案網站：<code>https://&lt;你的帳號&gt;.github.io/&lt;repo-name&gt;/</code></p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <small>© 2025 Jessie — Minimal GitHub Pages Test</small>
+    </div>
+  </footer>
+
+  <!-- Tawk.to -->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+    var s1=document.createElement("script"), s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    // ↓↓↓ Replace YOUR_TAWK_WIDGET_ID with your own widget id ↓↓↓
+    s1.src='https://embed.tawk.to/YOUR_TAWK_WIDGET_ID/default';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+</body>
+</html>
