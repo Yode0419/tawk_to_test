@@ -66,3 +66,70 @@ details {
 summary {
   cursor: pointer;
 }
+
+/* 聯絡客服按鈕容器 */
+.contact-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+/* 聯絡客服按鈕基礎樣式 */
+.contact-button {
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+  min-width: 140px;
+}
+
+/* 技術支援按鈕（藍色） */
+.contact-button.tech-support {
+  background: var(--brand);
+  box-shadow: 0 2px 8px rgba(122, 162, 255, 0.3);
+}
+
+.contact-button.tech-support:hover {
+  background: #618be6;
+  box-shadow: 0 4px 12px rgba(122, 162, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.contact-button.tech-support:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(122, 162, 255, 0.4);
+}
+
+/* 訂單詢問按鈕（綠色） */
+.contact-button.order-inquiry {
+  background: #6fdc8c;
+  box-shadow: 0 2px 8px rgba(111, 220, 140, 0.3);
+}
+
+.contact-button.order-inquiry:hover {
+  background: #5bc977;
+  box-shadow: 0 4px 12px rgba(111, 220, 140, 0.5);
+  transform: translateY(-2px);
+}
+
+.contact-button.order-inquiry:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(111, 220, 140, 0.4);
+}
+
+/* 響應式設計：小螢幕時垂直排列 */
+@media (max-width: 480px) {
+  .contact-buttons {
+    flex-direction: column;
+  }
+
+  .contact-button {
+    width: 100%;
+  }
+}
